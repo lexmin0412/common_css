@@ -1,0 +1,20 @@
+.todetail ( @width, @height, @right, @marginTop ) {
+    position: relative;
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: @right;
+        transform: rotate(-45deg) translateY(-50%);
+        width: @width;
+        height: @height;
+        border: 1px solid black;
+        border-width: 0 1px 1px 0;
+        margin-top: @marginTop;
+    }
+}
+
+#box {
+    .todetail(10px, 10px, 10px, -2px)
+}
