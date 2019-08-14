@@ -1,0 +1,91 @@
+html, body, div, section, ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	// ios手机滑动
+	-webkit-overflow-scrolling: touch;
+}
+// 特殊元素特殊样式
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	// 移动端点击链接高亮
+    -webkit-tap-highlight-color: transparent;
+}
+button {
+	outline: none;
+	border: 0;
+}
+
+// rem适配
+html {
+	font-size: 20px;
+}
+@media only screen and (min-width:401px) {
+	html {
+		font-size: 25px!important;
+	}
+}
+@media only screen and (min-width:428px) {
+	html {
+		font-size: 26.75px!important;
+	}
+}
+@media only screen and (min-width:481px) {
+	html {
+		font-size: 30px!important;
+	}
+}
+@media only screen and (min-width:569px) {
+	html {
+		font-size: 35px!important;
+	}
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 40px !important; 
+    }
+}
+
+// 位移
+#trans {
+    /*水平居中*/
+    .transToXCenter {
+        left: 50%;
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    /*垂直居中*/
+    .transToYCenter {
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    /*绝对居中*/
+    .transToCenter {
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .trans(@transX, @transY) {
+        -moz-transform: translate(@transX, @transY);
+        -webkit-transform: translate(@transX, @transY);
+        -o-transform: translate(@transX, @transY);
+        -ms-transform: translate(@transX, @transY);
+        transform: translate(@transX, @transY);
+    }
+}
